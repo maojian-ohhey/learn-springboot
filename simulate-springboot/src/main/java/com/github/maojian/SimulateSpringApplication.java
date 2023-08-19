@@ -18,8 +18,14 @@ public class SimulateSpringApplication {
         applicationContext.refresh();
 
         // 2. 启动tomcat
-        startTomcat(applicationContext);
+//        startTomcat(applicationContext);
 
+        WebServer webServer = getWebServer(applicationContext);
+        webServer.start();
+    }
+
+    public static WebServer getWebServer(AnnotationConfigWebApplicationContext applicationContext){
+        return null;
     }
 
     public static void startTomcat(WebApplicationContext applicationContext){
