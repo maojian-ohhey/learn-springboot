@@ -1,6 +1,8 @@
 package com.github.maojian;
 
+import org.springframework.web.context.WebApplicationContext;
+
 public interface WebServer {
 
-    void start();
+    void start(WebApplicationContext applicationContext) throws Exception;
 }
